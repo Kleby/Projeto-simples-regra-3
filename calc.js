@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // e.preventDefault();
     const form = document.querySelector("#calcForm");
     const btnCalc = document.querySelector("#btnCalc");
+    const { quantidadeContada, pesoQuantidadeContada, pesoTotal} = data;
 
     const calc = (data) => {
-        const { quantidadeContada, pesoQuantidadeContada, pesoTotal} = data;
         const num1 = parseFloat(quantidadeContada);
         const num2 = parseFloat(pesoQuantidadeContada);
         const num3 = parseFloat(pesoTotal);
@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     btnCloseModal.addEventListener("click", (e)=>{
         e.preventDefault();
         inputsData.innerHTML = `
-            <p>Quantidade Contada: ${num1}</p>
-            <p>Peso da Quantidade Contada: ${num2}</p>
-            <p>Peso Total: ${num3}</p>
+            <p>Quantidade Contada: ${quantidadeContada}</p>
+            <p>Peso da Quantidade Contada: ${pesoQuantidadeContada}</p>
+            <p>Peso Total: ${pesoTotal}</p>
         `;
         form.reset();
         modalCalc.classList.remove("is-active");
