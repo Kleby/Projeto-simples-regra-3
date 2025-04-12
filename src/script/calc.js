@@ -21,8 +21,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
         return Math.ceil(result);
     }
+    const modalCalc = document.querySelector("#modalCalc");
+    // isOpenModal = false;
     btnCalc.addEventListener("click", (e)=>{
         e.preventDefault();
+        console.log(modalCalc);
+        
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
         const result = calc(data);
@@ -30,8 +34,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
         
         calcResult.innerText = `Resultado: ${result} unidades`;
         form.reset();
+        modalCalc.classList.add("is-active");
         calcResult.scrollIntoView({ behavior: "smooth" });
     });
     btnCalc.removeEventListener("click", (e)=>{});
+
+    const btnCloseModal = document.querySelector("#btnCloseModal");
+    btnCloseModal.addEventListener("click", (e)=>{
+        e.preventDefault();
+        modalCalc.classList.remove("is-active");
+    });
 });
 document.removeEventListener("DOMContentLoaded", (e)=>{});

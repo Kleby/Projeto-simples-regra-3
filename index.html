@@ -61,19 +61,16 @@
             class="btn btn-primary"
             type="button"
             id="btnCalc"
-            data-bs-toggle="modal"
-            data-bs-target="#modalCalc"
           >
             Calcular
           </button>
 
+        </div>
           <!-- Modal -->
           <div
             class="modal fade"
             id="modalCalc"
             tabindex="-1"
-            aria-labelledby="modalCalcLabel"
-            aria-hidden="true"
           >
             <div class="modal-dialog">
               <div class="modal-content">
@@ -86,13 +83,13 @@
                     class="btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"
+                    id="btnCloseModal"
                   ></button>
                 </div>
                 <div class="modal-body">
                   <p id="calcResult" class="modal-result"></p>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </form>
