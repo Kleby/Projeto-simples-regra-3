@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const modalCalc = document.querySelector("#modalCalc");
     // isOpenModal = false;
     btnCalc.addEventListener("click", (e)=>{
-        e.preventDefault();
-        console.log(modalCalc);
+        // e.preventDefault();
+        modalCalc.classList.add("is-active");
         
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         
         calcResult.innerText = `Resultado: ${result} unidades`;
         form.reset();
-        modalCalc.classList.add("is-active");
         calcResult.scrollIntoView({ behavior: "smooth" });
     });
     btnCalc.removeEventListener("click", (e)=>{});
