@@ -40,19 +40,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     btnCalc.removeEventListener("click", (e)=>{});
     
     const btnCloseModal = document.querySelector("#btnCloseModal");
-    const inputsData = document.querySelectorAll("#inputsData");
     btnCloseModal.addEventListener("click", (e)=>{
         e.preventDefault();
-        console.log(num1, num2, num3);
-        console.log(inputsData);
-        
-        const inputQantidadeContada = document.querySelector("#inputQuantidadeContada");
-        const inputPesoQuantidadeContada = document.querySelector("#inputPesoQuantidadeContada");
-        const inputPesoTotal = document.querySelector("#inputPesoTotal");
-        
-        inputQantidadeContada.innerText = num1;
-        inputPesoQuantidadeContada.innerHTML = num2;
-        inputPesoTotal.innerHTML = num3;
+
         form.reset();
         modalCalc.classList.remove("is-active");
     });
