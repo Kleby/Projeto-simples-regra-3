@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     btnCalc.removeEventListener("click", (e)=>{});
     
     const btnCloseModal = document.querySelector("#btnCloseModal");
+    console.log('ok');
+    
     btnCloseModal.addEventListener("click", (e)=>{
         e.preventDefault();
 
