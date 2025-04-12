@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular com regra de 3</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/src/styles/main.css" />
+
+  </head>
+  <body>
+    <main class="main__container container">
+      <h1 class="main__title text-center my-5">
+        Programa para Calcular regra de 3
+      </h1>
+      <form class="form__container" id="calcForm">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="0"
+            name="quantidadeContada"
+          />
+          <label for="floatingInput">Quantidades contadas</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="pesoQuantidadeContada"
+            placeholder="0,0g"
+            name="pesoQuantidadeContada"
+          />
+          <label for="pesoQuantidadeContada">Peso da quantidade contada</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="pesoTotal"
+            placeholder="0,0g"
+            name="pesoTotal"
+          />
+          <label for="pesoTotal">Peso Total</label>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            id="btnCalc"
+            data-bs-toggle="modal"
+            data-bs-target="#modalCalc"
+          >
+            Calcular
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="modalCalc"
+            tabindex="-1"
+            aria-labelledby="modalCalcLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modalCalcLabel">
+                    Resultado do calculo
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p id="calcResult" class="modal-result"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+    <script src="/src/script/calc.js"></script>
+  </body>
+</html>
