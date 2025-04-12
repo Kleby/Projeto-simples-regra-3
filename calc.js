@@ -33,14 +33,20 @@ document.addEventListener("DOMContentLoaded", ()=>{
         const calcResult = document.querySelector("#calcResult");
         
         calcResult.innerText = `Resultado: ${result} unidades`;
-        form.reset();
         calcResult.scrollIntoView({ behavior: "smooth" });
     });
     btnCalc.removeEventListener("click", (e)=>{});
-
+    
     const btnCloseModal = document.querySelector("#btnCloseModal");
+    const inputsData = document.querySelectorAll(".inputsData");
     btnCloseModal.addEventListener("click", (e)=>{
         e.preventDefault();
+        inputsData.innerHTML = `
+            <p>Quantidade Contada: ${num1}</p>
+            <p>Peso da Quantidade Contada: ${num2}</p>
+            <p>Peso Total: ${num3}</p>
+        `;
+        form.reset();
         modalCalc.classList.remove("is-active");
     });
 });
