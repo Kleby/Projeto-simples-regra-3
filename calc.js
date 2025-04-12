@@ -2,12 +2,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // e.preventDefault();
     const form = document.querySelector("#calcForm");
     const btnCalc = document.querySelector("#btnCalc");
-    const { quantidadeContada, pesoQuantidadeContada, pesoTotal} = data;
 
+    let num1, num2, num3;
+    
     const calc = (data) => {
-        const num1 = parseFloat(quantidadeContada);
-        const num2 = parseFloat(pesoQuantidadeContada);
-        const num3 = parseFloat(pesoTotal);
+        const { quantidadeContada, pesoQuantidadeContada, pesoTotal} = data;
+        num1 = parseFloat(quantidadeContada);
+        num2 = parseFloat(pesoQuantidadeContada);
+        num3 = parseFloat(pesoTotal);
         
         if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
             alert("Campos inválidos");
